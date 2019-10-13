@@ -10,7 +10,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import math.Math;
 
 /**
@@ -23,10 +23,10 @@ public class FMath extends JFrame{
     JLabel labelA;
     JLabel labelB;
     JLabel labelC;
-    //text area
-    JTextArea txtAreaA;
-    JTextArea txtAreaB;
-    JTextArea txtAreaC;
+    //text field
+    JTextField txtFieldA;
+    JTextField txtFieldB;
+    JTextField txtFieldC;
     //dugmici
     JButton btnSaberi;
     JButton btnOduzmi;
@@ -43,10 +43,10 @@ public class FMath extends JFrame{
         labelA=new JLabel("a:");
         labelB=new JLabel("b:");
         labelC=new JLabel("c:");
-        //text area
-        txtAreaA=new JTextArea();
-        txtAreaB=new JTextArea();
-        txtAreaC=new JTextArea();
+        //text field
+        txtFieldA=new JTextField();
+        txtFieldB=new JTextField();
+        txtFieldC=new JTextField();
         //dugmici
         btnSaberi=new JButton("Saberi");
         btnOduzmi=new JButton("Oduzmi");
@@ -59,10 +59,10 @@ public class FMath extends JFrame{
        labelA.setBounds(80, 30, 40, 20);
        labelB.setBounds(80,60,40,20);
        labelC.setBounds(80,90,40,20);
-       //text area
-       txtAreaA.setBounds(115,30,100,20);
-       txtAreaB.setBounds(115,60,100,20);
-       txtAreaC.setBounds(115,90,100,20);
+       //text field
+       txtFieldA.setBounds(115,30,100,20);
+       txtFieldB.setBounds(115,60,100,20);
+       txtFieldC.setBounds(115,90,100,20);
        //dugmici
        btnSaberi.setBounds(30,150,100,20);
        btnOduzmi.setBounds(150,150,100,20);
@@ -74,10 +74,10 @@ public class FMath extends JFrame{
         container.add(labelA);
         container.add(labelB);
         container.add(labelC);
-        //text area
-        container.add(txtAreaA);
-        container.add(txtAreaB);
-        container.add(txtAreaC);
+        //text field
+        container.add(txtFieldA);
+        container.add(txtFieldB);
+        container.add(txtFieldC);
         //dugmici
         container.add(btnSaberi);
         container.add(btnOduzmi);
@@ -96,18 +96,18 @@ public class FMath extends JFrame{
     
     private void btnSaberiActionPerformed(ActionEvent e) {
         double a,b,c;
-        a=Double.parseDouble(txtAreaA.getText());
-        b=Double.parseDouble(txtAreaB.getText());
+        a=Double.parseDouble(txtFieldA.getText());
+        b=Double.parseDouble(txtFieldB.getText());
         c=Math.saberi(a,b);
-        txtAreaC.setText(c+"");
+        txtFieldC.setText(c+"");
     }
     
     private void btnOduzmiActionPerformed(ActionEvent e) {
         double a,b,c;
-        a=Double.parseDouble(txtAreaA.getText());
-        b=Double.parseDouble(txtAreaB.getText());
+        a=Double.parseDouble(txtFieldA.getText());
+        b=Double.parseDouble(txtFieldB.getText());
         c=Math.oduzmi(a,b);
-        txtAreaC.setText(c+"");  
+        txtFieldC.setText(c+"");  
     }
       
     
